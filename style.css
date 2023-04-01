@@ -211,7 +211,7 @@
 	
 }
 .containerHeaderCustExp > p{
-	font-family: 'MMetropolis', sans-serif;
+	font-family: 'Metropolis', sans-serif;
 	font-weight: 500;
 	font-size: 1rem;
 	line-height: 1.5rem;
@@ -248,4 +248,138 @@
 	margin-left: 3rem;
 	display: flex;
 	gap: 1rem;
+}
+.businessPartners {
+	width: 100%;
+	margin-top: 2rem;
+}
+.containerBusinessPartners{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	background: rgba(252, 224, 239, 0.2);
+	text-align: center;
+	width: 70rem;
+}
+.headingBusinessPartners {
+	font-family: 'Metropolis', sans-serif;
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 1.5rem;
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+}
+.cardBusinessPartners {
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	gap: 5rem;
+	padding-bottom: 3rem;
+}
+/* IpDc*/
+.ipdcFinance{
+	width: 100%;
+}
+.containerIpdcFinance{
+	display: flex;
+	width: 70rem;
+	margin: auto;
+}
+.containerIpdcFinance > img {
+	width: 40%;
+}
+.decriptionIpdc {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	justify-content: center;
+	padding-left: 7rem;
+	font-family: 'Metropolis', sans-serif;
+	font-size: 1rem;
+	line-height: 2rem;
+	font-weight: 400;
+}
+.decriptionIpdc > h3 {
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 3rem;
+	color: black;
+}
+.containerReadMore {
+	gap: 1rem;
+	display: flex;
+	align-items: center;
+}
+.containerReadMore > a {
+	gap: 1rem;
+	color: #ED017F;
+	text-decoration: none;
+}
+.containerReadMore > a > img {
+	margin-left: 1rem;
+}
+/* Our Services */
+.ourServices {
+	width: 100%;
+}
+.containerOurServices {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 70rem;
+	margin: auto;
+	background: #FEF9FC;
+}
+.headerOurServices {
+	text-align: center;
+	font-family: 'Metropolis', sans-serif;
+}
+.headerOurServices > h3{
+	font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+	color: black;
+}
+.headerOurServices > p {
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #999999;
+}
+.ourServicesImages {
+	display: flex;
+	gap: 2rem;
+	padding: 1rem;
+	justify-content: space-between;
+	font-family: 'Metropolis', sans-serif;
+}
+.imageOurServices > img {
+	width: 15rem;
+	height: 20rem;
+	border-radius: 9px;
+}
+.imageOurServices > a {
+	font-weight: 600;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	text-decoration: none;
+}
+.imageOurServices a > img {
+	align-items: center;
+	margin-left: 4rem;
+	margin-bottom: 2rem;
+}
+.footerImageOurServices {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: 600;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	text-decoration: none;
+	font-size: 1.7rem;
+	line-height: 3rem;
+}
+.footerImageOurServices > a {
+	text-decoration: none;
 }
