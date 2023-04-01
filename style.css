@@ -28,7 +28,7 @@
 .headerMainSection{
 	display: flex;
 	height: auto;
-	justify-content: center;
+	margin: auto;
 	align-items: center;
 	font-family: 'Metropolis', sans-serif;
 	font-weight: 600;
