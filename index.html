@@ -5,7 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>IPDC</title>
+	<link rel="stylesheet" href="styleForModalWindow.css">
 	<link rel="stylesheet" href="style.css">
+	
 	<link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
 </head>
 <body>
@@ -27,9 +29,63 @@
 				<h1 class="mainSectionHeadText">Chase Your <br> Dream with us</h1>
 				<p class="mainSectionParagraph">The harder you work for something, the greater you’ll feel when you achieve it.</p>
 				<div class="mainSectionContainerButton">
-					<button class="aplyOnline ">Apply Online</button>
+					<button class="depositCalculator ">Deposit Caclulator</button>
 					<button class="loanCalculator ">Loan Caclulator</button>
 				</div>
+				<div class="modal-window hidden loan">
+					<button class="close-modal-window" id="btnCloaseLoanWindow">&times;</button>
+					<h1>Loan Caclulator</h1>
+						
+				  </div>
+				<div class="overlay hidden"></div>
+				<div class="modal-window hidden " id="deposit">
+					<button class="close-modal-window" id="btnCloaseDepositWindow">&times;</button>
+					<h1>Caluclator Deposit</h1>
+					<section class="depositInfo">
+						<div class="formLoanWraper">
+							<form action="">
+								<label for="depositType">Choose a deposit type:</label>
+								<select id="depositType">
+									<option value="">--Please choose an deposit--</option>
+									<option value="Capital">Capital</option>
+									<option value="Junior">Junior</option>
+								</select>
+								<select name="valute" id="valute" >
+									<option value="MDL" selected>MDL</option>
+									<option value="EUR">EUR</option>
+									<option value="USD">USD</option>
+									<input type="number" placeholder="introduce sum of deposit">
+								</select>
+								<select name="termin" id="termin">
+									<option value="0" selected>Selecteaza terminul dorit </option>
+									<option value="3">3 luni</option>
+									<option value="6">6 luni</option>
+									<option value="9">9 luni</option>
+									<option value="12">12 luni</option>
+								</select>
+							</form>
+						</div>
+						<div class="informationAboutRecompense">
+							<div class="profitInMonth">
+								<h6>Profit in Month</h6>
+								<p class="textProfit">0,0 </p>
+							</div>
+							<div class="profitInMonth">
+								<h6>Profit anual</h6>
+								<p class="textProfit">0,0 </p>
+							</div>
+							<div class="profitInMonth">
+								<h6>Profit total al depozitului</h6>
+								<p class="textProfit">0,0 </p>
+							</div>
+						</div>
+						<div class="btnCalculateWrapper">
+							<button class="btnreset">Reset</button>
+							<button class="btnCalculate">Calculate</button>
+						</div>
+					</section>
+				  </div>
+				<div class="overlay hidden"></div>
 				<div class="contactUsContainer">
 					<a><li class="phone"></li> </a>
 					<div class="socialMediaContainer">
