@@ -1,0 +1,96 @@
+/* Cererile media */
+/* Media query pentru ecrane de dimensiune mică */
+@media (min-width: 320px) and (max-width: 426px) {
+	.container {
+	  max-width: 100%;
+	  padding: 0 10px;
+	}
+	.menu {
+		display: none;
+	}
+	.leftMainSection > h1 {
+		font-size: 10vw;
+	}
+	.rightMainSection {
+		display: none;
+	}
+	.leftMainSection {
+		margin: 0 auto;
+		align-items: center;
+	}
+	.contactUsContainer {
+		margin-top: 1rem;
+	}
+	.
+	
+  }
+
+@media (min-width: 427px) and (max-width: 767px) {
+	.container {
+	  max-width: 100%;
+	  padding: 0 10px;
+	}
+	.menu {
+		/* trebuie de facut burger */
+		font-size: 2vw;
+	}
+	.rightMainSection {
+		display: none;
+	}
+	.leftMainSection {
+		margin: 0 auto;
+		align-items: center;
+	}
+	.contactUsContainer {
+		margin-top: 1rem;
+	}
+	
+
+	
+  }
+  
+  /* Media query pentru ecrane de dimensiune medie */
+  @media (min-width: 768px) and (max-width: 991px) {
+	.container {
+	  max-width: 750px;
+	}
+	.contactUsContainer {
+		margin-top: 1rem;
+	}
+
+	
+  }
+  
+  /* Media query pentru ecrane de dimensiune mare */
+  @media (min-width: 992px) and (max-width: 1199px) {
+	.container {
+	  max-width: 960px;
+	}
+	.contactUsContainer {
+		margin-top: 1rem;
+	}
+	
+  }
+  /* Media query pentru ecrane de dimensiune foarte mare */
+  @media (min-width: 1200px) {
+	.container {
+	  max-width: 1140px;
+	}
+	.sliderContainer>img {
+		margin-top: 6rem;
+		margin-left: -7rem;
+		width: 130%;
+		margin-bottom: -7rem;
+	}
+	.contactUsContainer {
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+		width: 10rem;
+		flex-wrap: wrap;
+		margin-top: 7rem;
+	}
+	.sectionCustomerExperience {
+		margin-top: 5rem;
+	}
+}
