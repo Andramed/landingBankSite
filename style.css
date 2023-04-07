@@ -65,7 +65,7 @@
 	letter-spacing: 0.1rem;
 	filter: drop-shadow(0 0 0.40rem crimson);
 	height: 2.5rem;
-	width: 9rem;;
+	width: 9rem;
 }
 
 /* main body */
@@ -94,14 +94,13 @@
 .leftMainSection > p {
 	margin: 0;
 	text-align: left;
-	
 	font-size: 1rem;
 	line-height: 1.5rem;
 	margin-bottom: 1rem;
 }
 .mainSectionContainerButton {
 	display: flex;
-	width: 18rem;
+	width: 20rem;
 	justify-content: space-between;
 	margin-bottom: 1rem;
 }
@@ -211,19 +210,23 @@
 .cardsExperience{
 	display: flex;
 	flex-direction: column;
+	margin-right: -40px;
 	
 }
 .topCardExperience {
 	display: flex;
+	width: 100%;
+	justify-content: space-around;
 	gap: 1rem;
 }
 .card {
 	display: flex;
 	flex-direction: column;
 	text-align: start;
-	margin: auto;
-	width: 100px;
-	
+	width:fit-content;
+}
+.card > p {
+	width: 10rem;
 }
 .card > img {
 	width: 2rem;
@@ -232,20 +235,22 @@
 }
 .bottomCardExperience {
 	margin-top: 1rem;
+	justify-content: space-around;
 	display: flex;
+	width: 100%;
 	gap: 1rem;
 }
 .businessPartners {
-	width: 100%;
-	margin-top: 2rem;
+	margin: auto;
+	
 }
 .containerBusinessPartners{
 	display: flex;
+	width: 100%;
 	flex-direction: column;
-	margin: auto;
 	background: rgba(252, 224, 239, 0.2);
 	text-align: center;
-	width: 70rem;
+	
 }
 .headingBusinessPartners {
 	font-family: 'Metropolis', sans-serif;
@@ -258,8 +263,7 @@
 .cardBusinessPartners {
 	display: flex;
 	justify-content: space-between;
-	margin: auto;
-	gap: 5rem;
+	
 	padding-bottom: 3rem;
 }
 /* IpDc*/
@@ -268,8 +272,7 @@
 }
 .containerIpdcFinance{
 	display: flex;
-	width: 70rem;
-	margin: auto;
+	
 }
 .containerIpdcFinance > img {
 	width: 40%;
@@ -312,8 +315,6 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	width: 70rem;
-	margin: auto;
 	background: #FEF9FC;
 }
 .headerOurServices {
@@ -357,7 +358,7 @@
 }
 .footerImageOurServices {
 	display: flex;
-	justify-content: space-around;
+
 	align-items: center;
 	font-weight: 600;
 	font-size: 1.6rem;
@@ -368,6 +369,7 @@
 }
 .footerImageOurServices > a {
 	text-decoration: none;
+	color: black;
 }
 .loansCalculator {
 	display: none;
@@ -375,7 +377,115 @@
 .loansCalculatorDisplay {
 	display: block;
 	background: red;
+}
+/* Our best results */
+.ourBestResults {
+	width: 100%;
+}
+.headerBestResults {
+	text-align: center;
+}
+.toppercentageResults {
+	display: flex;
+	justify-content: space-around;
+}
+.bottompercentageResults {
+	display: flex;
+	justify-content: space-around;
+}
+.cardPercentage	{
+	text-align: start;
+	width: 10rem;
+}
+.newsletter {
+	padding-top: 2rem;
+	width: 100%;
+	background: #FEF9FC;
+	padding-bottom: 1rem;
+}
+.headerNewsletter {
+	text-align: center;
+}
+.inputMail {
+	padding-top: 2rem;
+	text-align: center;
+}
+.email {
+	
+	border: 1px solid gray;
+	border-radius: 4px;
+	padding: 10px;
+}
+.subscribeEmail{
+	border-radius: 4px;
+    background: #ED017F;
+    border-style: none;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.2rem 1rem;
+    text-align: center;
+}
+footer {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+	width: 100%
+}
+footer > div {
+	width: 20%;
+	height: 15rem;
+	line-height: 2rem;
 	
 }
+footer > div > h6 {
+	font-size: 1.2rem;
+	margin: 0;
+	margin-bottom: 1rem;
+}
+footer> div >ul {
+	padding: 0;
+}
+footer> div >ul> li {
+	list-style: none;
+}
+footer> div >ul > li > a {
+	text-decoration: none;
+	color: black;
+	text-align: start;
+	padding-left: 0;
+}
+footer> div >ul > li > a:hover {
+	text-decoration: none;
+	color: #ED017F;
+	text-align: start;
+	padding-left: 0;
+}
+footer>div>h6 {
+	margin-bottom: 1rem;
+}
+.aboutTheCompany > .contactUsContainer {
+	margin-top: 1rem;
+} 
 
-
+.contactPhone {
+	display: flex;
+	margin-left: 25px;
+	
+}
+.contactPhone > ul {
+	padding: 0;
+}
+.contactPhone > ul >a>.phone {
+	padding: 0;
+	width: 10px;
+}
+.contactPhone > ul>li {
+	list-style: none;
+	margin-top: -5px;
+}
+.contactPhone > ul>li>a {
+	margin-top: 10px;
+	text-decoration: none;
+	color: black;
+}
