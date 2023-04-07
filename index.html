@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>IPDC</title>
+	<link rel="stylesheet" href="styleForModalWindow.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="media.css">
@@ -29,14 +30,124 @@
 					<h1 class="mainSectionHeadText">Chase Your <br> Dream with us</h1>
 					<p class="mainSectionParagraph">The harder you work for something, the greater you’ll feel when you achieve it.</p>
 					<div class="mainSectionContainerButton">
-						<button class="aplyOnline ">Apply Online</button>
-						<button class="loanCalculator ">Loan Caclulator</button>
+						<button class="depositCalculator">Deposit Caluclator</button>
+						<button class="loanCalculator">Loan Caclulator</button>
 					</div>
-					<div class="loansCalculator">
-						<button class="btnClose">
-							close
-						</button>
-					</div>
+					<div class="modal-window hidden" id="loan">
+						<button class="close-loan" id="btnCloaseLoanWindow">&times;</button>
+						<h1>Loan Caclulator</h1>	
+						<section class="loanInfo">
+							<div class="wrapperSectionLoan">
+								<div class="formLoanWraper">
+									<form class="form">
+										<label for="loanType">Choose a loan type:</label>
+										<div class="selectConatiner">
+											<select class="selectItem" id="depositType">
+												<option value="">Please choose an deposit</option>
+												<option value="Capital">Capital</option>
+												<option value="Junior">Junior</option>
+											</select>
+										</div>	
+										<div class="selectConatiner">
+											<select class="selectItem"  name="valute" id="currencyLoan" >
+												<option value="MDL" selected>MDL</option>
+												<option value="EUR">EUR</option>
+												<option value="USD">USD</option>
+												<input type="number" placeholder="introduce sum of loan" class="amountLoan">
+											</select>
+											
+										</div>
+										
+										<div class="selectConatiner">
+											<select class="selectItem"  name="termin" id="terminLoan">
+												<option value="0" selected>Selecteaza terminul dorit </option>
+												<option value="3">3 luni</option>
+												<option value="6">6 luni</option>
+												<option value="9">9 luni</option>
+												<option value="12">12 luni</option>
+											</select>
+										</div>
+									</form>
+								</div>
+								<div class="botomCalcLoan">
+									<div class="informationAboutLoan">
+										<div class="payMonth">
+											<h6>Monthly payment</h6>
+										  	<p class="textMonthlyPayment">0,0 </p>
+										</div>
+										
+										<div class="totalPay">
+											<h6>Totally toward the return</h6>
+											<p class="totalToReturn">0,0 </p>
+										</div>
+									</div>
+									<div class="btnCalculateWrapper">
+										<button class="btnResetLoan btn">Reset</button>
+										<button class="btnCalculateLoan btn">Calculate</button>
+									</div>
+								</div>
+							</div>
+						</section>
+					  </div>
+					<div class="overlay hidden"></div>
+					<div class="modal-window hidden  " id="deposit">
+						<button class="close-modal-window-deposit deposit" id="btnCloaseDepositWindow">&times;</button>
+						<h1>Caluclator Deposit</h1>
+						<section class="depositInfo">
+							<div class="wrapperSectionDeposit">
+								<div class="formDepositWraper">
+									<form class="form formDeposit">
+										<label for="depositType">Choose a deposit type:</label>
+										<div class="selectConatiner">
+											<select class="selectItem" id="depositType">
+												<option value="">Please choose an deposit</option>
+												<option value="Capital">Capital</option>
+												<option value="Junior">Junior</option>
+											</select>
+										</div>	
+										<div class="selectConatiner">
+											<select class="selectItem" name="valute" id="currency" >
+												<option value="MDL" selected>MDL</option>
+												<option value="EUR">EUR</option>
+												<option value="USD">USD</option>
+												<input type="number" placeholder="introduce sum of deposit" class="amount fieldInput">
+											</select>
+										</div>	
+										<div class="selectConatiner">
+											<select class="selectItem" name="termin" id="termin">
+												<option value="0" selected>Selecteaza terminul dorit </option>
+												<option value="3">3 luni</option>
+												<option value="6">6 luni</option>
+												<option value="9">9 luni</option>
+												<option value="12">12 luni</option>
+											</select>
+										</div>																
+									</form>
+								</div>
+								<div class="botomCalcDeposit">
+									<div class="informationAboutRecompense">
+										<div class="profitInMonth">
+											<h6>Profit in Month</h6>
+											<p class="textProfitMonth">0,0 </p>
+										</div>
+										<div class="profitInMonth">
+											<h6>Profit anual</h6>
+											<p class="textProfitAnual">0,0 </p>
+										</div>
+										<div class="profitInMonth">
+											<h6>Profit total al depozitului</h6>
+											<p class="textProfitTotal">0,0 </p>
+										</div>
+									</div>
+									<div class="btnCalculateWrapper">
+										<button class="btnreset btn">Reset</button>
+										<button class="btnCalculate btn">Calculate</button>
+									</div>
+								</div>
+							</div>
+						</section>
+					  </div>
+					<div class="overlay hidden"></div>
 					<div class="contactUsContainer">
 						<a><li class="phone"></li> </a>
 						<div class="socialMediaContainer">
@@ -167,7 +278,6 @@
 					</p>
 					<div class="containerReadMore">
 						<a href="#">Read More <img src="image/Vector.png" alt="arrow"></a>
-						 
 					</div>
 					</div>
 			</div>
@@ -210,6 +320,172 @@
 				</div>
 			</div>
 		</section>
+		<section class="ourBestResults">
+			<div class="containerBestResults">
+				<div class="headerBestResults">
+					<h1>
+						Our best results for the year
+					</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam, dapibus mattis vel feugiat erat tortor eleifend.
+					</p>
+				</div>
+				<div class="cardPercentageResults">
+					<div class="toppercentageResults">
+						<div class="cardPercentage">
+							<h1>
+								57.6 bn
+							</h1>
+							<p>
+								LOAN PORTFOLIO
+							</p>
+						</div>
+						<div class="cardPercentage">
+							<h1>
+								0.95%
+							</h1>
+							<p>
+								CLASSIFIED LOAN PORTFOLIO
+							</p>
+						</div>
+						<div class="cardPercentage">
+							<h1>
+								388.5%
+							</h1>
+							<p>
+								CLASSIFIED LOAN Coverage
+							</p>
+						</div>
+						<div class="cardPercentage">
+							<h1>
+								50.4 bn
+							</h1>
+							<p>
+								Deposit
+							</p>
+						</div>
+					</div>
+					<div class="bottompercentageResults">
+						<div class="cardPercentage">
+							<h1>
+								6.1 bn
+							</h1>
+							<p>
+								Shareholders equity
+							</p>
+						</div>
+						<div class="cardPercentage">
+							<h1>
+								18.51%
+							</h1>
+							<p>
+								Capital Adequacy Ratio
+							</p>
+						</div>
+						<div class="cardPercentage">
+							<h1>
+								8.5 bn
+							</h1>
+							<p>
+								Market Capitalization
+							</p>
+						</div>
+						<div class="cardPercentage">
+							<h1>
+								AAA
+							</h1>
+							<p>
+								Credit Rating
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="newsletter">
+			<div class="headerNewsletter">
+				<h1>
+					Newsletter
+				</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ac quis aliquam arcu lacus.
+				</p>
+			</div>
+			<div class="inputMail">
+				<form action="">
+					<input type="email" placeholder="Your emai" class="email">
+					<button class="subscribeEmail">Subscribe</button>
+				</form>
+			</div>
+		</section>
+		<footer>	
+			<div class="aboutTheCompany">
+				<h6>
+					About the company
+				</h6>
+				<p>
+					Learn To Love Growth And Change And You Will Be A Success. Microsoft Patch 
+				</p>
+				<div class="contactUsContainer">
+					<a><li class="phone"></li> </a>
+					<div class="socialMediaContainer">
+						<a href="https://www.facebook.com/" target="_blank"><li class="facebook"></li></a>
+						<a href="https://www.youtube.com/" target="_blank"><li class="youtube"></li></a>
+						<a href="https://www.linkedin.com/" target="_blank"><li class="linkedin"></li></a>
+						<a href="https://www.instagram.com/" target="_blank"><li class="instagram"></li></a>							
+					</div>
+				</div>
+			</div>
+			<div class="products">
+				<h6>
+					Products
+				</h6>
+				<ul>
+					<li><a href="#">CSR Activities </a></li>
+					<li><a href="#">Green Banking</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Ongoing Campgain</a></li>
+					<li><a href="#"">Updates</a></li>
+				</ul>
+			</div>
+			<div class="getStarted">
+				<h6>Get Started</h6>
+				<ul>
+					<li><a href="">Career</a></li>
+					<li><a href="">Contact Us</a></li>
+					<li><a href="">Government Securities</a></li>
+					<li><a href="">Examples</a></li>
+					<li><a href="">NIS</a></li>
+				</ul>
+			</div>
+			<div class="about">
+				<h6>About</h6>
+				<ul>
+					<li><a href="">IPDC at a Glance</a></li>
+					<li><a href="">Mission, VIsion & Values</a></li>
+					<li><a href="">Corporate Governanace</a></li>
+					<li><a href="">Shareholders</a></li>
+					<li><a href="">Investor Relations</a></li>
+				</ul>
+			</div>
+			<div class="adress">
+				<h6>Ne puteti gasi pe adresa: </h6>
+				<ul>
+					<li>
+						<a target="_blank" href="https://www.google.com/maps/place/Banca+Na%C5%A3ional%C4%83+a+Moldovei/@47.0290391,28.8359305,17z/data=!3m1!4b1!4m6!3m5!1s0x40c97c4a6bb7a1b3:0x30da91440c63cc08!8m2!3d47.0290391!4d28.8381192!16s%2Fg%2F1q62cczcz?hl=ro">Bulevardul Grigore Vieru 1, Chișinău 2005, Republica Moldova</a>
+					</li>
+				</ul>
+				<h6>Apela pe numarul</h6>
+				<div class="contactPhone">
+					<ul>
+						<a><li class="phone"></li> </a>
+					</ul>
+					<ul>
+						<li><a href="tel:+373600130477">+373600130477</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</div>
 	<script src="scrypt.js"></script>
 </body>
