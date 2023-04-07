@@ -6,8 +6,6 @@ let textProfitMonth = document.querySelector('.textProfitMonth'),
 	textProfitTotal = document.querySelector('.textProfitTotal'),
 	textMonthlyPayment = document.querySelector('.textMonthlyPayment'),
 	textTowardToReturn = document.querySelector('.totalToReturn');
-
-
 class Deposit {
 	constructor(typedeposit, currency, amount, terminDeposit) {
 		this.typedeposit = typedeposit;
@@ -16,16 +14,15 @@ class Deposit {
 		this.terminDeposit = terminDeposit;
 	}
 	calculateMonthProffit () {
-		return this.amount * ((10 / 100) / 12)
+		return Math.floor(this.amount * ((10 / 100) / 12))
 	}
 	calculateAnualProffit() {
-		return this.calculateMonthProffit() * 12;
+		return Math.floor( this.calculateMonthProffit() * 12);
 	}
 	calculateProfitByTermin () {
 		let profit = this.calculateMonthProffit() * this.terminDeposit + this.amount;
-		return profit;
+		return Math.floor(profit);
 	}
-
 }
 class Loan {
 	constructor(typeLoan, currencyLoan, amountLoan, terminLoan){
@@ -42,46 +39,6 @@ class Loan {
 		return total
 	}
 }
-
-//   functionalitati diferite
-const addClass = (element, classYouWant) => {
-	element.classList.add(classYouWant);
-}
-const removeClass = (element, clasYouWant) => {
-	element.classList.remove(clasYouWant)
-}
-const giveElementById = (idElement) => {
-	let element = document.querySelector(`#${idElement}`);
-	return element
-}
-const giveElementByClass = (classElement) => {
-	let element = document.querySelector(`.${classElement}`);
-	return element
-}
-const closeWindow = (parentClass,) => {
-	let window = giveElementById(parentClass.id);
-	addClass(window, 'hidden');
-}
-const openModalWindow = (classClickedElement) => {
-	let btn = giveElementByClass(classClickedElement);
-	if (classClickedElement.indexOf('deposit') >=0) {
-		let depositModalWindow = giveElementById('deposit');
-		removeClass(depositModalWindow, 'hidden');
-	} else {
-		let loanModalWindow = giveElementById('loan');
-		removeClass(loanModalWindow, 'hidden');
-	}
-}
-// Deschidem modal Window
-containerButton.addEventListener('click', function(event) {
-	let clasClickedButton = event.target.classList.value;
-	if (clasClickedButton === 'depositCalculator') {
-		openModalWindow(clasClickedButton);
-	} else {
-		openModalWindow(clasClickedButton);
-	}
-	
-})
 
 //functionalitai pentu modalWindowLoan
 modalWindowLoan.addEventListener('click', function(event) {
@@ -116,21 +73,17 @@ textTowardToReturn.textContent = 0;
 formDeposit.reset();
 }
 //
-// daca este apasat unul din 3 btn prezente, atunci, in cazul cind este btn close, 
-// odata ce obtin clasa la btn close,
-// chem functia closeWindow care in care va fi scris deja insturctiunea,
-// functia 
+// Modal Window Deposit functionality
 modalWindowDeposit.addEventListener('click', function(event) {
 	let clickedElement = event.target;
 	 let classClickedElement = clickedElement.classList.value;
 	 let parentClass = clickedElement.parentNode;
-	 
 	 if (classClickedElement.indexOf('deposit') >= 0) {
 		closeWindow(parentClass);
  	 } 
-	 else if (classClickedElement === 'btnCalculate') {
+	 else if (classClickedElement.indexOf('Calculate') >=0) {
 		calculateProfit();
-	 } else if(classClickedElement === 'btnreset') {
+	 } else if(classClickedElement.indexOf('reset') >= 0) {
 		reset();
 	 }
 })
@@ -154,7 +107,47 @@ const reset = () => {
 	textProfitTotal.textContent = 0;
 	formDeposit.reset();
 }
+// Deschidem modal Window
+containerButton.addEventListener('click', function(event) {
+	let clasClickedButton = event.target.classList.value;
+	if (clasClickedButton === 'depositCalculator') {
+		openModalWindow(clasClickedButton);
+	} else {
+		openModalWindow(clasClickedButton);
+	}
+	
+})
 
+//   functionalitati diferite
+const addClass = (element, classYouWant) => {
+	element.classList.add(classYouWant);
+}
+const removeClass = (element, clasYouWant) => {
+	element.classList.remove(clasYouWant)
+}
+const giveElementById = (idElement) => {
+	let element = document.querySelector(`#${idElement}`);
+	return element
+}
+const giveElementByClass = (classElement) => {
+	let element = document.querySelector(`.${classElement}`);
+	return element
+}
+const closeWindow = (parentClass,) => {
+	let window = giveElementById(parentClass.id);
+	addClass(window, 'hidden');
+}
+const openModalWindow = (classClickedElement) => {
+	let btn = giveElementByClass(classClickedElement);
+	if (classClickedElement.indexOf('deposit') >=0) {
+		let depositModalWindow = giveElementById('deposit');
+		removeClass(depositModalWindow, 'hidden');
+	} else {
+		let loanModalWindow = giveElementById('loan');
+		removeClass(loanModalWindow, 'hidden');
+	}
+}
+// clipBordCopie Phone number
 const copyToClipBoard = () => {
 	const textToCopy = '+373600130477';
 	navigator.clipboard.writeText(textToCopy).then(() => {
