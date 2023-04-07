@@ -21,7 +21,7 @@
 	.contactUsContainer {
 		margin-top: 1rem;
 	}
-	.
+	
 	
   }
 
@@ -57,8 +57,28 @@
 	.contactUsContainer {
 		margin-top: 1rem;
 	}
-
+	.containerIpdcFinance > img {
+		flex-grow: 1;
+	}
 	
+	.decriptionIpdc > p {
+		display: none;
+	}
+	.imageOurServices > img {
+		width: 20vh;
+		height: 27vh;
+		border-radius: 9px;
+	}
+	.footerImageOurServices {
+		display: flex;
+		
+		align-items: center;
+		font-weight: 600;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		
+		
+	}
   }
   
   /* Media query pentru ecrane de dimensiune mare */
@@ -69,8 +89,25 @@
 	.contactUsContainer {
 		margin-top: 1rem;
 	}
+	.card > p {
+		width: 27vh;
+	}
+	.containerIpdcFinance > img {
+		width: 40%;
+		height: 33rem;
+	}
+	.containerIpdcFinance > p {
+		font-size: 1rem;
+	}
+	.imageOurServices > img {
+		width: 29vh;
+		height: 35vh;
+		border-radius: 9px;
+	}
 	
-  }
+}
+	
+  
   /* Media query pentru ecrane de dimensiune foarte mare */
   @media (min-width: 1200px) {
 	.container {
@@ -92,5 +129,8 @@
 	}
 	.sectionCustomerExperience {
 		margin-top: 5rem;
+	}
+	.card > p {
+		width: 32vh;
 	}
 }
